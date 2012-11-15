@@ -1,0 +1,7 @@
+#Ignore everything
+*
+#Except this file
+!t_cache
+!t_compile
+!t_config
+!.gitignore

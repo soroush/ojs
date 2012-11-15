@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Looping Audio with Flash Fallback Test</title>
+
+  <!-- Load the Flowplayer Javascript -->
+  <script type="text/javascript"
+          src="flowplayer/example/flowplayer-3.2.6.min.js"></script>
+</head>
+
+<body>
+
+<h1>HTML5 Looping Audio with Flash Fallback Test</h1>
+
+<!--
+HTML5 <audio> tag for modern browsers.
+
+The controls can be removed if necessary. They are provided by the
+browser itself so there is not much that can be done to style them or
+change their size.
+
+Note the autoplay and loop attributes.
+
+We would have to test, but it looks like most browsers support at
+least WAV and MP3, and maybe OGG Vorbis and M4A.
+-->
+<audio id="audioplayer" preload="auto" autoplay="autoplay"
+       loop="loop" controls="controls">
+
+  <!-- Set up the audio sources. We prefer OGG Vorbis to MP3 for its openness
+  and MP3 to WAV for its file size. -->
+  <!-- <source src="/cantoriaDeViola.ogg" type="application/ogg"/> -->
+  <source src="/cantoriaDeViola.mp3" type="audio/mpeg"/>
+  <source src="/cantoriaDeViola.wav" type="audio/wav"/>
+
+  <!-- Fallback to Flash if there is no <audio> support. The Flowplayer flash
+  object will load the same MP3 file we referenced above and play it, giving
+  it visual controls. -->
+  <a href="cantoriaDeViola.mp3"
+     style="display:block;width:400px;height:30px"
+     id="flowplayer">Download <em>cantoriaDeViola.mp3</em>.</a>
+
+  <!-- this will install flowplayer inside previous A- tag. -->
+  <script language="javascript">
+    flowplayer("flowplayer", "flowplayer/flowplayer-3.2.7.swf", {
+      clip: {
+        onBeforeFinish: function() { return false; }
+      },
+      plugins: {
+        controls: {
+          autoHide: {
+            enabled: false
+          },
+          fullscreen: false,
+        }
+      }
+    });
+  </script>
+</audio>
+
+<h2>A little bit of background</h2>
+
+<p>This solution does rely on Javascript.</p>
+
+<p>This solution should play an MP3 directly using &lt;audio&gt;. If this does not work it will fall back to playing a WAV file directly using &lt;audio&gt;. If that does not work it will display a Flash player that will load and play the MP3 file.<.p>
+
+<p>If JavaScript is unavailable but HTML5 &lt;audio&gt; is available it should play fine. On Chromium or IE9 it will loop properly. On Firefox 4 and Opera it will only play once.</p>
+
+<p>If JavaScript and HTML5 &lt;audio&gt; are both unavailable there will simply be a link to the audio file in MP3 format.</p>
+
+<script language="javascript">
+  var player = document.getElementById('audioplayer');
+
+  if (player.addEventListener !== undefined) {
+    player.addEventListener('ended', function() {
+      this.currentTime = 0;
+    }, false);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+--- locale_20100115.xml	2010-01-15 10:19:36.000000000 -0500
++++ locale.xml	2010-01-15 13:54:36.000000000 -0500
+@@ -198,7 +198,7 @@
+ 	<message key="navigation.register">S'inscrire</message>
+ 	<message key="navigation.user">Utilisateur</message>
+ 	<message key="navigation.archives">Archives</message>
+-	<message key="navigation.current">Courant</message>
++	<message key="navigation.current">№ actuel</message>
+ 	<message key="navigation.search">Rechercher</message>
+ 	<message key="navigation.otherJournals">Autres revues</message>
+ 	<message key="navigation.browse">Explorer</message>
+@@ -401,7 +401,7 @@
+ 	<message key="submission.notes.createNewNote">Créer une nouvelle note</message>
+ 	
+ 	<!-- Common Journal Terms -->
+-	<message key="journal.currentIssue">Numéro courant</message>
++	<message key="journal.currentIssue">Numéro actuel</message>
+ 	<message key="journal.journals">Revues</message>
+ 	<message key="journal.path">Chemin</message>
+ 	<message key="journal.journal">Revue</message>
+@@ -965,7 +965,7 @@
+ 	<message key="manager.setup.managingTheJournal">Étape 4. Gérer la revue</message>
+ 	<message key="manager.setup.publicationScheduling">Calendrier de la publication</message>
+ 	<message key="manager.setup.publicationSchedule">Calendrier de publication</message>
+-	<message key="manager.setup.publicationScheduleDescription">Les articles de la revue peuvent être publiés ensemble, comme partie intégrante d'un numéro avec son propre sommaire. Des articles individuels peuvent aussi être publiés dès qu'ils sont prêts, en les ajoutant au sommaire du numéro courant. Fournir aux lecteurs, dans « À propos de la revue », un énoncé relativement au système que cette revue utilisera et la fréquence de publication prévue.</message>
++	<message key="manager.setup.publicationScheduleDescription">Les articles de la revue peuvent être publiés ensemble, comme partie intégrante d'un numéro avec son propre sommaire. Des articles individuels peuvent aussi être publiés dès qu'ils sont prêts, en les ajoutant au sommaire du numéro actuel. Fournir aux lecteurs, dans « À propos de la revue », un énoncé relativement au système que cette revue utilisera et la fréquence de publication prévue.</message>
+ 	<message key="manager.setup.publicationFormat">Format</message>
+ 	<message key="manager.setup.publicationFormatYear">Année</message>
+ 	<message key="manager.setup.initialIssue">Numéro initial</message>
+@@ -1040,18 +1040,18 @@
+ 	<message key="manager.setup.useJournalStyleSheet">Feuille de style de la revue</message>
+ 	<message key="manager.setup.noStyleSheetUploaded">Aucune feuille de style téléchargée.</message>
+ 	<message key="manager.setup.journalHomepageContent">Contenu de la page d'accueil de la revue</message>
+-	<message key="manager.setup.journalHomepageContentDescription">Par défaut, la page d'accueil consiste en liens de navigation. On peut ajouter d'autres contenus à la page d'accueil en utilisant une ou plusieurs des options suivantes, qui apparaîtront dans l'ordre indiqué. Noter que le numéro courant est toujours accessible par le lien Courant dans la barre de navigation.</message>
++	<message key="manager.setup.journalHomepageContentDescription">Par défaut, la page d'accueil consiste en liens de navigation. On peut ajouter d'autres contenus à la page d'accueil en utilisant une ou plusieurs des options suivantes, qui apparaîtront dans l'ordre indiqué. Noter que le numéro actuel est toujours accessible par le lien № actuel dans la barre de navigation.</message>
+ 	<message key="manager.setup.journalDescription">Description de la revue</message>
+ 	<message key="manager.setup.journalDescriptionDescription">Ajouter une brève description (20-25 mots) en texte en clair ou HTML qui apparaîtra juste au-dessous des liens de navigation.</message>
+ 	<message key="manager.setup.homepageImageDescription">Ajouter un fichier image ou graphique dans la page.</message>
+ 	<message key="manager.setup.homepageImage">Image de la page d'accueil</message>
+-	<message key="manager.setup.currentIssue">Numéro courant</message>
++	<message key="manager.setup.currentIssue">Numéro actuel</message>
+ 	<message key="manager.setup.additionalContent">Autre contenu</message>
+ 	<message key="manager.setup.additionalContentDescription">Ajouter le contenu suivant, en texte en clair ou en HTML, qui apparaîtra sous l'image de la page d'accueil, si elle est téléchargée.</message>
+ 	<message key="manager.setup.navigationBarDescription">Ajouter ou supprimer d'autres postes de la barre de navigation.</message>
+ 	<message key="manager.setup.navItemIsLiteral">La valeur de l'étiquette est une chaîne littérale (par ex., " Mise en page de la revue ") plutôt qu'une clé de message pour localisation (par ex., " manager.setup ")</message>
+ 	<message key="manager.setup.navItemIsAbsolute">Le URL est un URL absolu (par ex., " http://www.exemple.com ") plutôt qu'un chemin d'accès en rapport avec le site (par ex., " /gestionnaire/mise en page ")</message>
+-	<message key="manager.setup.displayCurrentIssue">Ajouter la table des matières pour le numéro courant (si disponible).</message>
++	<message key="manager.setup.displayCurrentIssue">Ajouter la table des matières pour le numéro actuel (si disponible).</message>
+ 	<message key="manager.setup.homeTitleImageInvalid">Format d'image du titre de la page d'accueil invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
+ 	<message key="manager.setup.homeHeaderImageInvalid">Format d'image du logo du titre de la page d'accueil invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
+ 	<message key="manager.setup.pageHeaderTitleImageInvalid">Format d'image du titre de la page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
+@@ -1186,19 +1186,19 @@
+ 
+ 	<!-- Subscription Policy Management -->
+ 	<message key="manager.subscriptionPolicies.subscriptionContact">Personne-ressource pour abonnements</message>
+-	<message key="manager.subscriptionPolicies.subscriptionContactDescription">La personne-ressource indiquée dans la catégorie "Abonnements" dans « Au sujet de la revue ».</message>
++	<message key="manager.subscriptionPolicies.subscriptionContactDescription">La personne-ressource indiquée dans la catégorie "Abonnements" dans « À propos de la revue ».</message>
+ 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Information sur les abonnements.</message>
+-	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Les types d'abonnement et la grille des tarifs seront automatiquement placés sous "Abonnement" sur la page « Au sujet de la revue » avec le nom du préposé aux abonnements. Des informations additionnelles pour les abonnements, tel les méthodes de paiement ou le support pour les abonnés de pays en voie de développement peuvent être ajoutées ici.</message>
++	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Les types d'abonnement et la grille des tarifs seront automatiquement placés sous "Abonnement" sur la page « À propos de la revue » avec le nom du préposé aux abonnements. Des informations additionnelles pour les abonnements, tel les méthodes de paiement ou le support pour les abonnés de pays en voie de développement peuvent être ajoutées ici.</message>
+ 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[Si vous utilisez le format HTML dans la zone de texte (pour police de caractères, caractères gras, couleur, etc.)  notez que les "Retours" dans le texte sont automatiquement traités comme étant <tt>&lt;br&gt;</tt>.]]></message>
+ 	<message key="manager.subscriptionPolicies.openAccessOptions">Options d'Open Access</message>
+-	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Les revues avec abonnements peuvent fournir un accès libre différé et/ou une fonction d'auto-archivage par l'auteur (ce qui augmente le nombre de lecteurs et de citations pour la revue). Les politiques choisies à cet égard apparaîtront  dans « Au sujet de la revue »</message>
++	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Les revues avec abonnements peuvent fournir un accès libre différé et/ou une fonction d'auto-archivage par l'auteur (ce qui augmente le nombre de lecteurs et de citations pour la revue). Les politiques choisies à cet égard apparaîtront  dans « À propos de la revue »</message>
+ 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Libre accès différé</message>
+ 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Avec un libre accès différé, les rédacteurs sont quand même capables de choisir des articles particuliers dans une revue pour les rendre immédiatement libres d'accès.</message>
+ 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Rendre le contenu de cette revue disponible en libre-accès.</message>
+ 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">Mois depuis la publication du numéro.</message>
+ 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Veuillez choisir une durée valide.</message>
+ 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Les lecteurs enregistrés auront le choix de recevoir la table des matières par courriel quand un numéro devient libre d'accès.</message>
+-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">L'énoncé suivant sera affiché dans « Au sujet de la revue » sous l'en-tête "Libre accès différé.</message>
++	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">L'énoncé suivant sera affiché dans « À propos de la revue » sous l'en-tête "Libre accès différé.</message>
+ 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Avis :</strong> Pour activer cette option, l'administrateur du site doit activer l'option des <tt>tâches à l'horaire</tt> dans le fichier de configuration OJS. Une configuration additionnelle du serveur peut s'avérer nécessaire pour soutenir cette fonction (qui ne sera pas forcément disponible sur tous les serveurs), tel qu'indiqué dans la documentation OJS.]]></message>
+ 	<message key="manager.subscriptionPolicies.authorSelfArchive">Auto-archivage par l'auteur</message>
+ 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Afficher la politique suivante, permettant aux auteurs de rendre leurs ouvrages accessibles en libre-accès.</message>
+@@ -1376,7 +1376,7 @@
+ 	<message key="editor.issues.createIssue">Créer un numéro</message>
+ 	<message key="editor.issues.backIssues"> Numéros précédents</message>
+ 	<message key="editor.issues.futureIssues">Numéros à venir</message>
+-	<message key="editor.issues.currentIssue">Numéro courant</message>
++	<message key="editor.issues.currentIssue">Numéro actuel</message>
+ 	<message key="editor.issues.numArticles">Articles</message>
+ 	<message key="editor.issues.noArticles">Aucun article n'est actuellement au calendrier pour ce numéro.</message>
+ 	<message key="editor.issues.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement ce numéro?</message>
+@@ -1938,12 +1938,12 @@
+ 	<message key="site.journalsHosted">revues hébergées dans ce site</message>
+ 	<message key="site.journalView">Voir la revue</message>
+ 	<message key="site.journalRegister">S'inscrire</message>
+-	<message key="site.journalCurrent">Numéro courant</message>
++	<message key="site.journalCurrent">Numéro actuel</message>
+ 	
+ 
+ 	<!-- Current index -->
+-	<message key="current.current">Courant</message>
+-	<message key="current.noCurrentIssue">Aucun numéro courant</message>
++	<message key="current.current">№ actuel</message>
++	<message key="current.noCurrentIssue">Aucun numéro actuel</message>
+ 	<message key="current.noCurrentIssueDesc">Cette revue n'a publié aucun numéro.</message>
+ 
+ 	<!-- Archive index -->
+@@ -1951,7 +1951,7 @@
+ 	<message key="archive.browse">Explorer en utilisant les anciens numéros</message>
+ 	<message key="archive.issueUnavailable">Numéro non disponible</message>
+ 	
+-	<!-- Au sujet de la revue -->
++	<!-- À propos de la revue -->
+ 	<message key="about.aboutSite">À propos du site</message>
+ 	<message key="about.contact">Contact</message>
+ 	<message key="about.contact.principalContact">Contact principal</message>
+@@ -1961,7 +1961,7 @@
+ 	<message key="about.contact.email">Courriel</message>
+ 	<message key="about.statistics">Statistiques</message>
+ 	<message key="about.journalContact">Personne-ressource pour la revue</message>
+-	<message key="about.aboutTheJournal">Au sujet de la revue</message>
++	<message key="about.aboutTheJournal">À propos de la revue</message>
+ 	<message key="about.editorialTeam">Comité éditorial</message>
+ 	<message key="about.editorialTeam.biography">Biographie</message>
+ 	<message key="about.editorialPolicies">Politiques éditoriales</message>
+@@ -2365,7 +2365,7 @@
+ 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas été précédemment publiée, et elle ne précède pas une autre revue pour examen (ou une explication a été fournie dans Commentaires au rédacteur).</message>
+ 	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la présentation est en format de fichier document Microsoft WORD, RTF, ou WordPerfect.</message>
+ 	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne; utiliser une police à 12 points; employer l'italique plutôt que le souligné (sauf pour les adresses URL); et placer toutes les illustrations, figures, et tables aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
+-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>, qui se trouve dans « Au sujet de la revue ».]]></message>
++	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>, qui se trouve dans « À propos de la revue ».]]></message>
+ 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Dans le cas d'une soumission à une rubrique évaluée par les pairs dans cette revue, les instructions dans <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">S'assurer d'une évaluation en aveugle</a> ont été suivies.]]></message>
+ 	<message key="default.journalSettings.privacyStatement">Les noms et adresses électroniques entrés dans ce site de la revue seront utilisés exclusivement aux fins indiquées de cette revue et ne serviront à aucune autre fin, ni à toute autre partie.</message>
+ 	<message key="default.journalSettings.openAccessPolicy">Cette revue procure un libre accès immédiat à son contenu se basant sur le principe qu'en mettant la recherche publiquement disponible facilite un plus grand échange du savoir, à l'échelle de la planète.</message>
+@@ -2437,7 +2437,7 @@
+ {$journalName}
+ {$indexUrl}/{$journalPath}</message>
+ 	<message key="default.journalSettings.forReaders"><![CDATA[Nous incitons les lecteurs à s'inscrire pour recevoir les avis de publication pour cette revue. Utiliser le <a href="{$indexUrl}/{$journalPath}/user/register">Inscrire</a> le lien en haut de la page d'accueil de la revue. Cette inscription permettra au lecteur de recevoir par courriel la table des matières de chaque nouveau numéro de la revue. Cette liste permet aussi à la revue d'inscrire un certain niveau de soutien ou de lectorat. Voir la rubrique de la revue <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Protection des données personnelles</a> qui confirme aux lecteurs que leur nom et leur adresse électronique ne seront pas utilisés à d'autres fins.]]></message>
+-	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à faire une soumission à cette revue? Nous vous recommandons de consulter les rubriques de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">Au sujet de la revue</a> <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">s'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/index/login">ouvrir une session</a> et commencer les 5 étapes du processus.]]></message>
++	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à faire une soumission à cette revue? Nous vous recommandons de consulter les rubriques de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">À propos de la revue</a> <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">s'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/index/login">ouvrir une session</a> et commencer les 5 étapes du processus.]]></message>
+ 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothèques à indiquer l'accès libre à cette revue parmi les revues électroniques qu'elles conservent. Ce système de publication est aussi conçu pour être hébergé et exploité par les bibliothèques de recherche afin de soutenir les travaux des membres de ses facultés associées publiés dans la revue. Pour en savoir plus sur l'utilisation de Open Journal Systems pour gérer et publier les revues évaluées par les pairs, voir <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
+ 	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et permet à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
+ 
+@@ -2523,15 +2523,15 @@
+ 	<message key="manager.payment.options.text">Description de la méthode de paiement</message>
+ 	<message key="manager.payment.generalOptions">Options générales</message>
+ 	<message key="manager.payment.authorFees">Droits d'auteur</message>
+-	<message key="manager.payment.authorFeesDescription">Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront à l'étape 1 du processus de soumission et dans la section Au sujet de la revue, sous l'entrée Soumissions, ainsi qu'aux étapes où un paiement est requis.</message>
++	<message key="manager.payment.authorFeesDescription">Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront à l'étape 1 du processus de soumission et dans la section À propos de la revue, sous l'entrée Soumissions, ainsi qu'aux étapes où un paiement est requis.</message>
+ 	<message key="manager.payment.readerFees">Frais de lecture</message>
+ 	<message key="manager.payment.feePaymentOptions">Options de paiement des frais</message>
+ 	<message key="manager.payment.options.fee">Frais</message>
+ 	<message key="manager.payment.options.feeName">Nom des frais</message>
+ 	<message key="manager.payment.options.feeDescription">Description des frais</message>
+-	<message key="manager.payment.readerFeesDescription">Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront à la rubrique Politiques, dans la section Au sujet de la revue, ainsi qu'aux étapes où un paiement est requis.</message>
++	<message key="manager.payment.readerFeesDescription">Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront à la rubrique Politiques, dans la section À propos de la revue, ainsi qu'aux étapes où un paiement est requis.</message>
+ 	<message key="manager.payment.generalFees">Frais généraux</message>
+-	<message key="manager.payment.generalFeesDescription">L'adhésion à l'Association apparaîtra sous la rubrique Politiques dans la section Au sujet de la revue. Le lien pour effectuer des dons apparaîtra au-dessus de la fonction de recherche, dans la marge droite du cadre.</message>
++	<message key="manager.payment.generalFeesDescription">L'adhésion à l'Association apparaîtra sous la rubrique Politiques dans la section À propos de la revue. Le lien pour effectuer des dons apparaîtra au-dessus de la fonction de recherche, dans la marge droite du cadre.</message>
+ 	<message key="manager.payment.options.submissionFee">Soumission d'article</message>
+ 	<message key="manager.payment.options.publicationFee">Publication d'article</message>
+ 	<message key="manager.payment.options.fastTrackFee">Révision accélérée</message>
+@@ -2582,7 +2582,7 @@
+ 	<message key="manager.setup.restrictArticleAccess">Les utilisateurs doivent être inscrits et ouvrir une session pour visionner le contenu libre-accès.</message>
+ 	<message key="manager.setup.submissionEventLogging">Tenez un registre, sur la page Historique, de toutes les actions prises concernant une soumission.</message>
+ 	<message key="manager.setup.submissionEmailLogging">Tenez un registre, sur la page Historique, de tous les courriels envoyés concernant une soumission.</message>
+-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[L'Avis de droits d'auteur ci-dessous apparaîtra dans la section Au sujet de la revue, et dans toutes les métadonnées des articles publiés. Bien que la revue soit responsable de définir les termes d'une entente avec les auteurs concernant les droits d'auteur, le Public Knowledge Project recommande l'utilisation de la licence <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. À cette fin, il offre <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">un exemple de libellé d’Avis de droits d’auteur </a> pouvant être copié et collé dans l'espace ci-dessous pour les revues offrant (a) le libre-accès, (b) le libre-accès à retardement, ou (c) n'offrant pas le libre-accès.]]></message>
++	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[L'Avis de droits d'auteur ci-dessous apparaîtra dans la section À propos de la revue, et dans toutes les métadonnées des articles publiés. Bien que la revue soit responsable de définir les termes d'une entente avec les auteurs concernant les droits d'auteur, le Public Knowledge Project recommande l'utilisation de la licence <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. À cette fin, il offre <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">un exemple de libellé d’Avis de droits d’auteur </a> pouvant être copié et collé dans l'espace ci-dessous pour les revues offrant (a) le libre-accès, (b) le libre-accès à retardement, ou (c) n'offrant pas le libre-accès.]]></message>
+ 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Suggestion d'avis de droits d'auteurs Common Creative</h3>
+ <h4>1. Suggestion de politique à l'intention de revues offrant le libre-accès</h4>
+ Les auteurs qui publient dans cette revue acceptent les termes suivants : 
