@@ -19,9 +19,6 @@ class PaymentManager {
 	 * Constructor
 	 * @param $request PKPRequest
 	 */
-	/**
-	* Doana - Local customization: See http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=7229
-	*/
 	function PaymentManager() {
 	}
 
