@@ -1,0 +1,32 @@
+================================
+=== OJS NivoSlider Plugin 
+=== Author: Adam Doan (doana@uoguelph.ca) 
+================================
+
+About
+-----
+This plugin provides an integrated NivoSlider image rotator that can be placed in any template file and managed through the OJS file browser. 
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. 
+
+System Requirements
+-------------------
+Same requirements as the OJS 2.2 core.
+
+Installation
+------------
+To install the plugin:
+ - Copy the plugin tar.gz file to your OJS/plugins/generic directory.
+ - To unzip the plugin inside the plugins/generic directory:
+    $ tar xvzf NivoSlider-1.0.tar.gz 
+ - Add a symlink from the private filesystem to the public files directory where the slideshow images and content will be stored.
+    $ ln -s /var/www/html/ojs-upgrade/public/slideshows/journal/19 slideshows
+ - Create a slideshows directory in the public files directory for the journal that you're setting the slideshow up for.
+   - Ensure that the public files directory is writable by the webserver user. 
+ - Create subdirectories inside of the slideshows directory for each slideshow.
+ - Add <div class="slideshow"></div> tags to your templates where you'd like the slideshows to be rendered.
+   - Use the title attribute of the div tag to specify which slideshow directory to use for each slideshow. 
+   - For example, use <div class="slideshow" title="home"></div> to draw images from the 'home' subdirectory of the slideshow directory. 
+ - Enable the plugin by going to:  Home > User > Journal Management > Plugin Management > Generic Plugins and selecting "ENABLE" under "Nivo Slider Plugin".
