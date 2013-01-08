@@ -47,24 +47,12 @@ class DataObject {
 		}
 
 		// Fallback: Get the first available piece of data.
-		/**
-		* Local customization - Errors were being thrown because $data is a string and 
-		* is being passed to array_keys, which expects an array (See about/EditorialTeamBio/%id).
-		*/
 		$data =& $this->getData($key, null);
-		if (!empty($data) ) {
-			if(is_array($data)) {
-				// WARNING: Collapsing the following into a single line causes PHP 5.0.5 to die.
-				$locales = array_keys($data);
-				$firstLocale = array_shift($locales);
-				return $data[$firstLocale];
-			}
-			else if(is_string($data)) {
-				return $data;
-			}
-			else {
-				return NULL;
-			}
+		if (!empty($data)) {
+			// WARNING: Collapsing the following into a single line causes PHP 5.0.5 to die.
+			$locales = array_keys($data);
+			$firstLocale = array_shift($locales);
+			return $data[$firstLocale];
 		}
 
 		// No data available; return null.

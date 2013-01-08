@@ -17,7 +17,6 @@
 class PaymentManager {
 	/**
 	 * Constructor
-	 * @param $request PKPRequest
 	 */
 	function PaymentManager() {
 	}
