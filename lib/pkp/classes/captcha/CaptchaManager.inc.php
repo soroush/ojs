@@ -110,10 +110,15 @@ class CaptchaManager {
 				);
 			}
 		}
+    
+    ob_clean();
+    ob_start();
 
 		header ('Content-type: ' . $this->getMimeType());
 		imagepng($image);
 		imagedestroy($image);
+
+    ob_end_flush();
 	}
 
 	/**
