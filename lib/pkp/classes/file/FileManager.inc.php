@@ -241,6 +241,9 @@ class FileManager {
 
 			Registry::clear(); // Free some memory
 
+      ob_clean();
+      ob_start();
+
 			header("Content-Type: $type");
 			header("Content-Length: ".filesize($filePath));
 			header("Content-Disposition: " . ($inline ? 'inline' : 'attachment') . "; filename=\"" .basename($filePath)."\"");
@@ -249,6 +252,8 @@ class FileManager {
 
 			import('lib.pkp.classes.file.FileManager');
 			FileManager::readFile($filePath, true);
+
+      ob_end_flush();
 
 			return true;
 
