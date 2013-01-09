@@ -52,8 +52,9 @@
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
 
-	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
-	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
+  <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
+  <script type="text/javascript" src="{$baseUrl}/lib/pkp/js/tag-it.js"></script>
+
 	<!-- Add javascript required for font sizer -->
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/jquery.cookie.js"></script>
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/fontController.js" ></script>
@@ -90,18 +91,17 @@ calization
   <!--
   var browser_type = navigator.appName;
   var myDirectory = '{$publicFilesDir}';
+  var baseUrl = '{$baseUrl}';
 
   if (myDirectory.substr(myDirectory.length-1) == '2') {ldelim}
     {if $issue}
       var myIssue = '{$issue->getIssueID()}';
-    {else}
-      var myIssue = '88';
+      if (browser_type == 'Microsoft Internet Explorer') {ldelim}
+        document.write("<link href='" + baseUrl + "/public/csi/styles/issue" + myIssue + "_ie.css' type='text/css' rel='stylesheet'>");
+      {rdelim} else {ldelim}
+        document.write("<link href='" + baseUrl + "/public/csi/styles/issue" + myIssue + ".css' type='text/css' rel='stylesheet'>");
+      {rdelim}
     {/if}
-    if (browser_type == 'Microsoft Internet Explorer') {ldelim}
-      document.write("<link href='http://131.104.62.21/public/csi/styles/issue" + myIssue + "_ie.css' type='text/css' rel='stylesheet'>");
-    {rdelim} else {ldelim}
-      document.write("<link href='http://131.104.62.21/public/csi/styles/issue" + myIssue + ".css' type='text/css' rel='stylesheet'>");
-    {rdelim}
   {rdelim}
   -->
   </script>
