@@ -41,8 +41,6 @@
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
 	{/if}
 
-
-
 	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
 	{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
 	{if $leftSidebarCode || $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
@@ -85,6 +83,29 @@ calization
                 {/literal}
         </script>	
 	{$additionalHeadData}
+  <!--
+  local customization: additional stylesheets for CSI journal
+  -->
+  <script type="text/javascript">
+  <!--
+  var browser_type = navigator.appName;
+  var myDirectory = '{$publicFilesDir}';
+
+  if (myDirectory.substr(myDirectory.length-1) == '2') {ldelim}
+    {if $issue}
+      var myIssue = '{$issue->getIssueID()}';
+    {else}
+      var myIssue = '88';
+    {/if}
+    if (browser_type == 'Microsoft Internet Explorer') {ldelim}
+      document.write("<link href='http://131.104.62.21/public/csi/styles/issue" + myIssue + "_ie.css' type='text/css' rel='stylesheet'>");
+    {rdelim} else {ldelim}
+      document.write("<link href='http://131.104.62.21/public/csi/styles/issue" + myIssue + ".css' type='text/css' rel='stylesheet'>");
+    {rdelim}
+  {rdelim}
+  -->
+  </script>
+
 </head>
 <body>
 <div id="container">
