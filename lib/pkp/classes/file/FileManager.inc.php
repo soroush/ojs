@@ -243,17 +243,16 @@ class FileManager {
 
       ob_clean();
       ob_start();
-
-			header("Content-Type: $type");
+      ob_end_flush();
+			
+      header("Content-Type: $type");
 			header("Content-Length: ".filesize($filePath));
 			header("Content-Disposition: " . ($inline ? 'inline' : 'attachment') . "; filename=\"" .basename($filePath)."\"");
 			header("Cache-Control: private"); // Workarounds for IE weirdness
 			header("Pragma: public");
 
 			import('lib.pkp.classes.file.FileManager');
-			FileManager::readFile($filePath, true);
-
-      ob_end_flush();
+      FileManager::readFile($filePath, true);
 
 			return true;
 
